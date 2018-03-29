@@ -1,0 +1,79 @@
+.card
+	box-shadow: -0.349px 4.988px 49px 0px rgba(0, 0, 0, 0.04)
+	background-color: #fff
+	padding: 1.5em 2em
+	border-radius: 8px
+	
+	& + .card
+		margin-top: 2em 
+		
+	&-header
+		padding-bottom: 2em
+		
+		h1
+			font-size: 2em
+			
+		h2
+			font-size: 1.5em
+			
+		h3
+			font-size: 1.25em
+			
+	&-footer
+		padding-top: 2em 
+		
+
+
+	&-primary
+		color: #fff
+		background-color: $color-main 
+		
+	&-info
+		color: #fff
+		background-color: $color-info
+		
+	&-success
+		color: #fff
+		background-color: $color-success
+		
+	&-danger
+		color: #fff
+		background-color: $color-danger 
+
+
+
+
+
+.alert
+	position: relative
+	padding: .75rem 1.25rem
+	margin-bottom: 1.5rem
+	border: 1px solid transparent
+	border-radius: .25rem
+	background-color: #F3F3F3
+	border-color: #F3F3F3
+	color: $text 
+	
+	p
+		&:not(:last-child)
+			margin-bottom: 1em 
+	
+	&-primary
+		border-color: $color-main
+		color: $color-main
+		+background-opacity($color-main, 0.2)
+		
+	&-info
+		border-color: $color-info
+		color: $color-info
+		+background-opacity($color-info, 0.2)
+		
+	&-success
+		border-color: $color-success
+		color: $color-success
+		+background-opacity($color-success, 0.2)
+		
+	&-danger
+		border-color: $color-danger
+		color: $color-danger
+		+background-opacity($color-danger, 0.2)

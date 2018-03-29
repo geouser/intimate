@@ -1,0 +1,125 @@
+.form-group
+	margin-bottom: 1.5em
+
+	&-label
+ 		font-weight: 700
+ 		display: block  
+ 		margin-bottom: 0.2em 
+ 		color: $input-text
+ 		
+
+
+.form-control
+	display: block
+	width: 100%
+	height: 50px
+	border: 1px solid #CDCDCD
+	padding: 0 1em
+	color: $input-text
+	line-height: 18px
+	transition: border-color 0.3s ease
+	background-color: #fff
+	
+	+placeholder
+		line-height: 18px 
+	
+	&-sm
+		height: 34px
+		
+	&.not-valid
+		border-color: $color-danger
+		
+	&.valid
+		border-color: $color-success
+		
+
+textarea.form-control
+	height: auto
+	resize: vertical
+	min-height: 50px 
+	padding-top: 15px
+	padding-bottom: 15px  
+		
+
+
+.custom-file
+	position: relative
+
+	&-input
+		position: relative
+		z-index: 0
+		width: 100%
+		margin: 0
+		opacity: 0
+		cursor: pointer
+		
+	&-label
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		z-index: 1
+		background-color: #FFF 
+		line-height: 20px
+		padding: 14px 1em 14px 8em
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis   
+		
+		&:before
+			height: 100%
+			width: 7em
+			text-align: center
+			content: attr(data-label)
+			display: block
+			color: #fff
+			background-color: $color-main
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0 
+			line-height: 20px
+			padding: 14px 1em
+			box-sizing: border-box 
+			cursor: pointer
+			transition: all 0.3s ease
+			
+			&:hover
+				background-color: $color-main-hover 
+			
+		&.form-control-sm
+			padding-top: 6px
+			padding-bottom: 6px 
+				
+			&:before
+				padding-top: 6px
+				padding-bottom: 6px  
+				
+	&-input:hover + &-label:before
+		background-color: $color-main-hover 
+		
+
+.input-group
+	display: flex
+	align-items: stretch
+	
+	.form-control
+		width: auto
+		flex: 1 1 auto
+
+.tip
+	font-size: 0.9em
+	display: block
+	margin: 0.5em 0
+	
+	&:last-child
+		margin-bottom: 0 
+	
+	&-danger
+		color: $color-danger
+		
+	&-success
+		color: $color-success
+		
+	&-info
+		color: $color-info

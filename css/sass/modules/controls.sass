@@ -1,7 +1,95 @@
-.btn
+.btn,
+.badge
+    line-height: 20px
+    padding: 15px 20px 
     height: 50px
-    left: 50px
-    display: inline-block  
+    display: inline-block 
+    border: 0
+    background-color: #E0E1E2  
+    color: #6C757D
+    cursor: pointer
+    transition: background-color 0.3s ease
+    
+    &:hover
+        background-color: #CCCDCE
+        
+
+    &-sm
+        padding-top: 7px
+        padding-bottom: 7px  
+        height: 34px
+        
+    &-rounded
+        border-radius: 6px
+        
+    &-round
+        border-radius: 25px    
+        
+    &.disabled,
+    &:disabled
+        opacity: 0.5
+    
+        
+
+    &-primary
+        background-color: $color-main
+        color: #fff
+        
+        &:hover
+            background-color: $color-main-hover 
+            
+
+    &-info
+        background-color: $color-info
+        color: #fff
+        
+        &:hover
+            background-color: $color-info-hover 
+    
+
+    &-success
+        background-color: $color-success
+        color: #fff
+        
+        &:hover
+            background-color: $color-success-hover 
+
+
+    &-danger
+        background-color: $color-danger
+        color: #fff
+        
+        &:hover
+            background-color: $color-danger-hover 
+            
+
+
+    .btn-icon
+        max-width: 18px
+        max-height: 18px
+        display: inline-block
+        vertical-align: middle 
+            
+    .btn-label
+        display: inline-block
+        vertical-align: middle 
+        padding: 0 0.5em
+        
+        &:first-child
+            padding-left: 0 
+            
+        &:last-child
+            padding-right: 0  
+
+
+.badge
+    cursor: default
+    padding-top: 7px
+    padding-bottom: 7px 
+    height: 34px 
+
+
+
 /* ------------------------------------ */
 /*  SLICK ARROWS  */
 .slick-arrow,
