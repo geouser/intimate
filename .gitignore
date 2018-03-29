@@ -1,11 +1,12 @@
 css/general.css
 css/general.css.map
-css/scss/general.css
-css/scss/general.css.map
+css/sass/general.css
+css/sass/general.css.map
 css/main.css
 css/main.min.css
 css/main.css.map
-css/scss/main.css
-css/scss/main.css.map
+css/sass/main.css
+css/sass/main.css.map
 *.css
 *.config
+*.map
