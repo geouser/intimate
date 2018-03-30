@@ -43,6 +43,21 @@ jQuery(document).ready(function($) {
     });
 
 
+    function fix_page_height(){
+        var sections = $('.page-content');
+
+        if ( sections.length == 1 ) {
+            sections.css('min-height', $(window).height() - $('.footer').outerHeight() - $('.header').outerHeight() );
+        }
+    }
+    fix_page_height();
+
+    $(window).on('resize', function(event) {
+        event.preventDefault();
+        fix_page_height();
+    });
+
+
     /*---------------------------
                                   File input logic
     ---------------------------*/
@@ -82,7 +97,7 @@ jQuery(document).ready(function($) {
     $('.js-toggle-menu').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('is-active');
-        $(this).siblings('header').toggleClass('open');
+        $('.header').toggleClass('active');
     });
 
 
@@ -150,6 +165,55 @@ jQuery(document).ready(function($) {
         });
     });
 
+
+
+
+    /*---------------------------
+                                  Vertical carousel
+    ---------------------------*/
+
+    //$('.vertical-carousel').slick({
+    //    vertical: true,
+    //    slidesToShow: 2,
+    //    slidesToScroll: 1,
+    //    arrows: false,
+    //    infinite: false
+    //})
+
+
+    $('.js-add-slide').on('click', function(event) {
+        event.preventDefault();
+        
+        var str = '<div class="slide">'+
+                        '<div class="card">'+
+                            '<div class="card-body">'+
+                                '<div class="tx-card">'+
+                                    '<div class="tx-card__recepient">NEW</div>'+
+                                    '<div class="tx-card__amount">1.5 ETH of Intimate Tokens</div>'+
+                                    '<div class="tx-card__time">12 Minutes ago</div>'+
+                                '</div>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>';
+
+
+        add_transaction( str );
+    });
+
+
+    function add_transaction ( html ) {
+        slide = $.parseHTML( html );
+
+        $(slide).addClass('hidden');
+
+        $('.vertical-carousel').prepend( slide );
+
+        setTimeout(function(){
+            $('.vertical-carousel').find('.second').removeClass('second');
+            $('.vertical-carousel').find('.first').removeClass('first').addClass('second');
+            $(slide).removeClass('hidden').addClass('first');
+        }, 100);
+    }
 
 
     /*---------------------------

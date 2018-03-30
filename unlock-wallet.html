@@ -94,14 +94,83 @@
 
             <aside>
                 <div class="sidebar">
-                    <div class="card">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure minima aspernatur veritatis expedita tempora aperiam eos modi ratione. Earum nisi dolores ex, deleniti assumenda libero minima quas unde perspiciatis!</p>
-                    </div>
+                    
+                    <div class="vertical-carousel">
 
-                    <div class="card card-primary">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure minima aspernatur veritatis expedita tempora aperiam eos modi ratione. Earum nisi dolores ex, deleniti assumenda libero minima quas unde perspiciatis!</p>
-                    </div>
-                </div>
+                        <div class="slide first">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tx-card">
+                                        <div class="tx-card__recepient">Someone from Argentina bought</div>
+                                        <div class="tx-card__amount">1.5 ETH of Intimate Tokens</div>
+                                        <div class="tx-card__time">12 Minutes ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- en slide -->
+
+                        <div class="slide second">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tx-card">
+                                        <div class="tx-card__recepient">Someone from Argentina bought </div>
+                                        <div class="tx-card__amount">1.5 ETH of Intimate Tokens</div>
+                                        <div class="tx-card__time">12 Minutes ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- en slide -->
+
+                        <div class="slide">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tx-card">
+                                        <div class="tx-card__recepient">Someone from Argentina bought</div>
+                                        <div class="tx-card__amount">1.5 ETH of Intimate Tokens</div>
+                                        <div class="tx-card__time">12 Minutes ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- en slide -->
+
+                        <div class="slide">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tx-card">
+                                        <div class="tx-card__recepient">Someone from Argentina bought </div>
+                                        <div class="tx-card__amount">1.5 ETH of Intimate Tokens</div>
+                                        <div class="tx-card__time">12 Minutes ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- en slide -->
+
+                    </div> <!-- en vartical-carousel -->
+
+                </div> <!-- end sidebar -->
+
+                <!-- 
+                    To add new transaction to this list use function add_transaction(html) where @param(html) is html of slide 
+
+                    For example 
+
+                    var slide = '<div class="slide">'+
+                                    '<div class="card">'+
+                                        '<div class="card-body">'+
+                                            '<div class="tx-card">'+
+                                                '<div class="tx-card__recepient">NEW</div>'+
+                                                '<div class="tx-card__amount">1.5 ETH of Intimate Tokens</div>'+
+                                                '<div class="tx-card__time">12 Minutes ago</div>'+
+                                            '</div>'+
+                                        '</div>'+
+                                    '</div>'+
+                                '</div>';
+
+                    add_transaction( slide );
+
+                    Important!
+                    .first and .second classes must be initialy added to first and second element of list
+                -->
             </aside>
 
         </div> <!-- end page-content -->

@@ -1,48 +1,277 @@
 .header
 	+position(fixed, 0, 0, auto, 0)
-	+transition(all, .4s)
+	z-index: 5 
+	background-color: #fff 
+	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.03)
+	color: $text
 	
-	height: 110px
-	color: #FFF
-	
-	.container-fluid
-		height: 100% 
-		padding: 0 40px 
-		.row
-			height: 100%
+	@media (min-width: 992px)
+		+transition(all, .4s)
+		
+	@media (max-width: 991px)
+		top: 0
+		bottom: 0
+		right: 0
+		left: auto
+		transform: translateX(100%)
+		width: 300px
+		z-index: 10 
+		padding: 55px 0
+		overflow: auto 
+		
+		&.active
+			transition: all 0.5s ease
+			opacity: 1
+			visibility: visible
+			transform: translateX(0)
 			
-.headroom--unpinned
-    transform: translateY(-100%)
-.headroom--pinned,
-.headroom--bottom 
-	transform: translateY(0)
+
+			
+
+		.menu-button
+			position: absolute
+			top: 0.5em
+			right: 1em
+	
+	.flex-row
+		display: flex
+		align-items: stretch
+		
+	&-bottom
+		border-top: 1px solid #EFEDED
+		
+
+@media (min-width: 992px)
+	.headroom--unpinned
+		transform: translateY(-100%)
+		opacity: 0
+		
+	.headroom--pinned,
+	.headroom--bottom 
+		transform: translateY(0)
+		opacity: 1
+	
+
+
+
+.header-section
+	display: flex
+	align-items: center
+	flex-wrap: nowrap
+	padding: 0.5em 2em
+	border-right: 1px solid #EFEDED
+	
+	@media (max-width: 991px)
+		padding-left: 1em
+		padding-right: 1em  
+	
+	&:first-child
+		padding-left: 0
+		
+	&:last-child
+		padding-right: 0 
+		border: 0
+	
+	&.logo-section
+		justify-content: flex-start
+		flex: 1 1 auto
+		width: 1%
+		
+	&.login-section
+		a
+			margin-right: 1em
+			
+			&:last-child
+				margin-right: 0 
+				
+	&.menu-section
+		justify-content: flex-start
+		flex: 1 1 auto
+		width: 1%
+		
+
+
+
+.site-link
+	width: 115px
+	max-width: 100% 
+	display: block
+	
+	img
+		display: block
+		max-width: 100% 
+		
+
+
+
+.support-link
+	color: $text
+	display: flex
+	align-items: center
+	
+	span
+		padding-left: 0.5em 
+	
+	img
+		width: 18px
+
+
+.identity-link
+	position: relative
+	
+	&.verified
+		&:after
+			content: ''
+			width: 12px
+			height: 12px
+			background-image: url(../images/icon-check-success.svg)
+			background-position: 50% 50%
+			background-size: 100%
+			position: absolute
+			top: 5px
+			right: 5px
+			filter: drop-shadow(0 0 2px #fff)
+
+	img
+		display: block
+
+
+.profile-link
+	width: 44px
+	height: 44px
+	color: #fff
+	text-transform: uppercase
+	text-align: center
+	line-height: 44px
+	font-size: 20px
+	border-radius: 50%
+	background-color: $color-info   
+	transition: all 0.3s ease
+	
+	&:hover
+		background-color: $color-info-hover 
+		
+
+.login-link
+	color: $color-info
+	
+	&:hover
+		text-decoration: underline
+		color: $color-info-hover
+
+
+
+
+
+.current-rate
+	text-align: center
+	
+	&-value
+		font-weight: 700
+		color: #000
+		font-size: 1.1em  
+		
+
+
+.balance-section
+	.wallet-balance
+		font-size: 1.3em
+		color: #000
+		padding-right: 2em 
+		
+		@media (max-width: 991px)
+			padding-right: 1em 
+		
+		img
+			width: 30px
+
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
 
-.page-menu
+.site-menu
+	margin: -0.5em 0
 	ul
 		list-style-type: none
+		margin: 0 -10px
 
 		li
 			display: inline-block
 			vertical-align: middle
-			margin: 0 10px
+			margin: 0 5px
+			font-weight: 300 
+			
+			@media (min-width: 992px)
+				font-size: 1.1em 
+				margin: 0 10px
 
 			a
-				color: #fff
-				text-transform: uppercase
+				padding: 1.5em 0
+				color: $text
+				display: block
+				position: relative 
+				
+				&:after
+					content: ''
+					width: 100%
+					height: 0
+					background-color: $color-info
+					transition: all 0.3s ease
+					position: absolute
+					left: 0
+					bottom: 0
+					right: 0
+					opacity: 0
+					visibility: hidden
+					
+
+			&.current-menu-item a,
+			&.active a,
+			a:hover,
+			a.active
+				color: $color-info
+				
+				&:after
+					height: 3px
+					opacity: 1
+					visibility: visible
 
 /* ------------------------------------ */
 /*  MENU BUTTON  */
 
+
+.mobile-header
+	background-color: #fff
+	padding: 0.5em 0
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.03)
+	z-index: 5 
+	
+	 
+	@media (min-width: 992px)
+		display: none
+		
 .menu-button
 	display: none
-	+position(fixed, 15px, 10px, auto, auto)
 	background: white
 	border-radius: 50%
-	box-shadow: 0 5px 10px rgba(black, 0.5)
+	box-shadow: 0 0 5px rgba(black, 0.15)
 	cursor: pointer
 	transform: rotate(0deg)
 	transition: .5s ease-in-out
 	cursor: pointer
+	background-color: $color-info 
+	
+	.hamburger-inner
+		background-color: #fff
+		
+		&:before,
+		&:after
+			background-color: #fff 
+	
+	@media (max-width: 991px)
+		display: block
+		margin: 0 0 0 auto

@@ -3,7 +3,10 @@
     line-height: 20px
     padding: 15px 20px 
     height: 50px
-    display: inline-block 
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    vertical-align: middle 
     border: 0
     background-color: #E0E1E2  
     color: #6C757D
@@ -68,11 +71,9 @@
         max-width: 18px
         max-height: 18px
         display: inline-block
-        vertical-align: middle 
             
     .btn-label
         display: inline-block
-        vertical-align: middle 
         padding: 0 0.5em
         
         &:first-child
@@ -84,9 +85,15 @@
 
 .badge
     cursor: default
-    padding-top: 7px
-    padding-bottom: 7px 
-    height: 34px 
+    padding-top: 4px
+    padding-bottom: 4px 
+    height: 28px 
+    padding-left: 0.5em
+    padding-right: 0.5em
+    
+    .btn-icon
+        max-width: 12px
+        max-height: 12px  
 
 
 

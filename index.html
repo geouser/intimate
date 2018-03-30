@@ -19,34 +19,100 @@
         <!--=================================================================================================-->
                                                     <!-- HEADER -->
         <header class="header">
-            <div class="container-fluid">
-                <div class="row align-items-center justify-content-between">
 
-                    <div class="col-auto">
-                        <a href="index.html" class="logo"><img src="images/logo.png" alt=""></a>
-                    </div>
+            <button class="hamburger hamburger--spin js-close-menu menu-button is-active" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button> 
+                
+            <div class="header-top">
+                
+                <div class="container">
+                    <div class="flex-row">
+                        <div class="header-section logo-section">
+                            <a href="index.html" class="site-link"><img src="images/site-logo.svg" alt=""></a>
+                        </div>
 
-                    <div class="col-auto text-right">
-                        <nav class="page-menu">
-                            <ul>
-                                <li><a href="index.html" class="active">Home</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="blog.html">News</a></li>
-                                <li><a href="contacts.html">Contacts</a></li>
-                            </ul>
-                        </nav><!-- end nav -->
+                        <div class="header-section support-section">
+                            <a href="#" class="support-link">
+                                <img src="images/icon-help.svg" alt="">
+                                <span>Contact Support</span>
+                            </a>
+                        </div>
+
+                        <div class="header-section login-section">
+                            <a href="kyc.html" class="identity-link verified">
+                                <img src="images/icon-identity.png" alt="">
+                            </a>
+
+                            <a href="#" class="profile-link"><span>DC</span></a>
+                                
+                            <!--
+                            <a href="#" class="login-link">Login</a>
+                            <a href="#" class="login-link">Register</a>
+                            -->
+                        </div>
                     </div>
-                    
-                </div><!-- end row -->
-            </div><!-- end container -->
+                </div>
+                                
+            </div> <!-- end header-top -->
+
+
+            <div class="header-bottom">
+                
+                <div class="container">
+                    <div class="flex-row">
+                        <div class="header-section menu-section">
+                            <nav class="site-menu">
+                                <ul>
+                                    <li class="current-menu-item"><a href="index.html">Dashboard</a></li>
+                                    <li><a href="about.html">About Intimate</a></li>
+                                    <li><a href="terms">Terms of Token Sale</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="header-section rate-section">
+                            <div class="current-rate">
+                                <div class="current-rate-label">Current Buy Rate</div>
+                                <div class="current-rate-value">1 ETH = 1500 INT</div>
+                            </div>
+                        </div>
+
+                        <div class="header-section balance-section">
+                            <span class="wallet-balance text-right">
+                                <img src="images/logo-blue.svg" alt="">
+                                <span class="value">0.00 INT</span>
+                            </span> 
+
+                            <a href="#" class="btn btn-info btn-sm btn-round">Buy INT</a>
+                        </div>    
+                    </div>    
+                </div>
+                                    
+
+            </div> <!-- end header-bottom -->
+
         </header><!-- end header -->
+    
         
-        <button class="hamburger hamburger--spin js-toggle-menu menu-button" type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>  
-
+        <div class="mobile-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <a href="index.html" class="site-link"><img src="images/site-logo.svg" alt=""></a>
+                    </div>
+                    <div class="col-6">
+                        <button class="hamburger hamburger--spin js-toggle-menu menu-button" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>  
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--=================================================================================================-->
                                                     <!-- OFFER SECTION -->
@@ -55,272 +121,358 @@
 
             <main>
                 
-                <div class="card">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure minima aspernatur veritatis expedita tempora aperiam eos modi ratione. Earum nisi dolores ex, deleniti assumenda libero minima quas unde perspiciatis!</p>
-                </div>
-
-                <div class="card card-primary">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure minima aspernatur veritatis expedita tempora aperiam eos modi ratione. Earum nisi dolores ex, deleniti assumenda libero minima quas unde perspiciatis!</p>
-                </div>
-
-                <div class="card card-info">
-                    <div class="card-header">
-                        <h3>Card header</h3>
-                    </div>
+                <div class="card card-info mb-3">
                     <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure minima aspernatur veritatis expedita tempora aperiam eos modi ratione. Earum nisi dolores ex, deleniti assumenda libero minima quas unde perspiciatis!</p>
-                    </div>
-                    <div class="card-footer">
-                        <p>Card footer</p>
-                    </div>
-                </div> <!-- end card -->
-
-                <div>
-                    <h2>Buttons</h2>
-
-                    <div>
-                        <h3>Regular</h3>
-
-                        <button class="btn">Button</button>
-                        <a class="btn" href="#">Button</a>
-                    </div>
-
-                    <div>
-                        <h3>Primary</h3>
-
-                        <button class="btn btn-primary">Button</button>
-                        <a class="btn btn-primary" href="#">Button</a>
-                    </div>
-
-                    <div>
-                        <h3>Info</h3>
-
-                        <button class="btn btn-info">Button</button>
-                        <a class="btn btn-info" href="#">Button</a>
-                    </div>
-
-                    <div>
-                        <h3>Success</h3>
-
-                        <button class="btn btn-success">Button</button>
-                        <a class="btn btn-success" href="#">Button</a>
-                    </div>
-
-                    <div>
-                        <h3>Danger</h3>
-
-                        <button class="btn btn-danger">Button</button>
-                        <a class="btn btn-danger" href="#">Button</a>
-                    </div>
-
-                    <div>
-                        <h3>Small</h3>
-
-                        <button class="btn btn-sm btn-primary">Button</button>
-                        <button class="btn btn-sm btn-info">Button</button>
-                        <button class="btn btn-sm btn-success">Button</button>
-                        <button class="btn btn-sm btn-danger">Button</button>
-                    </div>
-
-                    <div>
-                        <h3>Rounded</h3>
-
-                        <button class="btn btn-rounded btn-primary">Button</button>
-                        <button class="btn btn-rounded btn-info">Button</button>
-                        <button class="btn btn-rounded btn-success">Button</button>
-                        <button class="btn btn-rounded btn-danger">Button</button>
-                    </div>
-
-                    <div>
-                        <h3>Round</h3>
-
-                        <button class="btn btn-round btn-primary">Button</button>
-                        <button class="btn btn-round btn-info">Button</button>
-                        <button class="btn btn-round btn-success">Button</button>
-                        <button class="btn btn-round btn-danger">Button</button>
-                    </div>
-
-                    <div>
-                        <h3>Round</h3>
-
-                        <button class="btn btn-round btn-sm btn-primary">Button</button>
-                        <button class="btn btn-round btn-sm btn-info">Button</button>
-                        <button class="btn btn-round btn-sm btn-success">Button</button>
-                        <button class="btn btn-round btn-sm btn-danger">Button</button>
-                    </div>
-
-
-                    <div>
-                        <h3>With icon before</h3>
-
-                        <button class="btn btn-round btn-sm btn-primary">
-                            <img src="images/icon-download.png" alt="" class="btn-icon">
-                            <span class="btn-label">Button</span>
-                        </button>
-                        <button class="btn btn-round btn-sm btn-info">
-                            <img src="images/icon-download.png" alt="" class="btn-icon">
-                            <span class="btn-label">Button</span>
-                        </button>
-                        <button class="btn btn-round btn-sm btn-success">
-                            <img src="images/icon-download.png" alt="" class="btn-icon">
-                            <span class="btn-label">Button</span>
-                        </button>
-                        <button class="btn btn-round btn-sm btn-danger">
-                            <img src="images/icon-download.png" alt="" class="btn-icon">
-                            <span class="btn-label">Button</span>
-                        </button>
-                    </div>
-
-                    <div>
-                        <h3>With icon after</h3>
-
-                        <button class="btn btn-round btn-sm btn-primary">
-                            <span class="btn-label">Button</span>
-                            <img src="images/icon-download.png" alt="" class="btn-icon">
-                        </button>
-                        <button class="btn btn-round btn-sm btn-info">
-                            <span class="btn-label">Button</span>
-                            <img src="images/icon-download.png" alt="" class="btn-icon">
-                        </button>
-                        <button class="btn btn-round btn-sm btn-success">
-                            <span class="btn-label">Button</span>
-                            <img src="images/icon-download.png" alt="" class="btn-icon">
-                        </button>
-                        <button class="btn btn-round btn-sm btn-danger">
-                            <span class="btn-label">Button</span>
-                            <img src="images/icon-download.png" alt="" class="btn-icon">
-                        </button>
-                    </div>
-
-
-                    <div>
-                        <h3>Badges</h3>
-
-                        <span class="badge badge-rounded badge-primary">
-                            <img src="images/icon-check.png" alt="" class="btn-icon">
-                            <span class="btn-label">Badge</span>
-                        </span>
-                        <span class="badge badge-rounded badge-info">
-                            <img src="images/icon-check.png" alt="" class="btn-icon">
-                            <span class="btn-label">Badge</span>
-                        </span>
-                        <span class="badge badge-rounded badge-success">
-                            <img src="images/icon-check.png" alt="" class="btn-icon">
-                            <span class="btn-label">Badge</span>
-                        </span>
-                        <span class="badge badge-rounded badge-danger">
-                            <img src="images/icon-check.png" alt="" class="btn-icon">
-                            <span class="btn-label">Badge</span>
-                        </span>
-                    </div>
-
-
-
-                    <div>
-                        <h2>Forms</h2>
-
-                        <form action="">
-                            <div class="alert alert-primary">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, ex, repellat. Voluptatibus aliquid iusto laboriosam autem quos, quibusdam similique odio labore officia non a id ab, culpa totam inventore commodi.</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <h2 class="icon-title">
+                                    <span class="icon"><img src="images/icon-wallet.svg" alt=""></span>
+                                    <span class="text">Your Intimate Balance</span>
+                                </h2>
                             </div>
-
-                            <div class="alert alert-success">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, ex, repellat. Voluptatibus aliquid iusto laboriosam autem quos, quibusdam similique odio labore officia non a id ab, culpa totam inventore commodi.</p>
-                            </div>
-
-                            <div class="alert alert-info">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, ex, repellat. Voluptatibus aliquid iusto laboriosam autem quos, quibusdam similique odio labore officia non a id ab, culpa totam inventore commodi.</p>
-                            </div>
-
-                            <div class="alert alert-danger">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, ex, repellat. Voluptatibus aliquid iusto laboriosam autem quos, quibusdam similique odio labore officia non a id ab, culpa totam inventore commodi.</p>
-                            </div>
-
-                            <div class="alert">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, ex, repellat. Voluptatibus aliquid iusto laboriosam autem quos, quibusdam similique odio labore officia non a id ab, culpa totam inventore commodi.</p>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="" class="form-group-label">First name *</label>
-                                <input type="text" class="form-control" placeholder="First name">
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <label for="" class="form-group-label">First name *</label>
-                                        <input type="text" class="form-control" placeholder="First name">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="form-group">
-                                        <label for="" class="form-group-label">First name *</label>
-                                        <input type="text" class="form-control" placeholder="First name">
-                                    </div>
+                            <div class="col-6">
+                                <div class="text-right">
+                                    <span class="wallet-balance text-right">
+                                        <img src="images/logo-white.svg" alt="">
+                                        <span class="value">0.00 INT</span>
+                                    </span>    
                                 </div>
                             </div>
-
-                            <div class="form-group">
-                                <label for="" class="form-group-label">Message *</label>
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Message" class="form-control"></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="" class="form-group-label">Message *</label>
-                                <select name="name" id="" class="form-control">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="" class="form-group-label">First name *</label>
-                                <input type="text" class="form-control not-valid" placeholder="First name">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="" class="form-group-label">First name *</label>
-                                <input type="text" class="form-control valid" placeholder="First name">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="" class="form-group-label">Select file</label>
-
-                                <input type="text" class="form-control mb-05" placeholder="Enter your Government Issued ID Number (Passport #)">
-                                
-                                <div class="custom-file">
-                                    <input type="file" name="file" id="file-1" class="custom-file-input form-control form-control-sm">
-                                    <label for="file-1" class="custom-file-label form-control form-control-sm" data-label="Browse..."></label>
-                                </div> 
-
-                                <span class="tip tip-danger">Please upload only .JPG and .PNG file, and not more than 5MB.</span>
-                                <span class="tip tip-info">Please upload only .JPG and .PNG file, and not more than 5MB.</span>
-                                <span class="tip tip-success">Please upload only .JPG and .PNG file, and not more than 5MB.</span>
-                            </div>
-
-                            <div class="form-group text-center">
-                                <button class="btn btn-primary"><strong>Save Details</strong></button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
 
-            </main>
+                <section class="section mb-3">
+                    <h2 class="icon-title mb-1">
+                        <span class="icon"><img src="images/icon-cart.svg" alt=""></span>
+                        <span class="text">Buy Intimate Token</span>
+                    </h2>
+                    
+                    <div class="token-plans">
+                        <div class="row">
+
+                            <div class="col-12 col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="token-plan">
+                                            <div class="token-plan__icon">
+                                                <img src="images/icon-ethereum.svg" alt="">
+                                            </div>
+
+                                            <div class="token-plan__amount">0.1 ETHEREUM</div>
+
+                                            <div class="token-plan__token-amount">
+                                                <p>Amount of tokens: 0</p>
+                                                <p>Bonus: 1000</p>
+                                            </div>
+
+                                            <div class="token-plan__price">= 45.68 USD</div>
+
+                                            <div class="text-center">
+                                                <a href="#" class="btn btn-rounded btn-sm">Select</a>
+                                            </div>
+                                        </div> <!-- end token-plan -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="token-plan">
+                                            <div class="token-plan__icon">
+                                                <img src="images/icon-ethereum.svg" alt="">
+                                            </div>
+
+                                            <div class="token-plan__amount">0.1 ETHEREUM</div>
+
+                                            <div class="token-plan__token-amount">
+                                                <p>Amount of tokens: 0</p>
+                                                <p>Bonus: 1000</p>
+                                            </div>
+
+                                            <div class="token-plan__price">= 45.68 USD</div>
+
+                                            <div class="text-center">
+                                                <a href="#" class="btn btn-rounded btn-sm">Select</a>
+                                            </div>
+                                        </div> <!-- end token-plan -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="token-plan">
+                                            <form action="">
+                                                <div class="token-plan__icon">
+                                                    <img src="images/icon-ethereum.svg" alt="">
+                                                </div>
+
+                                                <div class="token-plan__amount">
+                                                    <input type="text" name="amount" placeholder="Amount" class="form-control form-control-sm">
+                                                </div>
+
+                                                <div class="token-plan__token-amount">
+                                                    <p>Amount of tokens: 0</p>
+                                                    <p>Bonus: 1000</p>
+                                                </div>
+
+                                                <div class="token-plan__price">= 45.68 USD</div>
+
+                                                <div class="text-center">
+                                                    <button class="btn btn-rounded btn-sm">Select</button>
+                                                </div>    
+                                            </form>
+                                            
+                                        </div> <!-- end token-plan -->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>    
+                    </div> <!-- end token-plans -->
+
+                    <div class="text-right">
+                        <a href="#" class="btn btn-primary btn-sm btn-rounded">
+                            <span class="btn-label">Next</span>
+                            <img src="images/icon-right.svg" alt="" class="btn-icon">
+                        </a>
+                    </div>
+                    
+                </section> <!-- end section -->
+
+
+                <div class="card mb-0">
+
+                    <div class="card-header">
+                        <h2 class="icon-title">
+                            <span class="icon"><img src="images/icon-list.svg" alt=""></span>
+                            <span class="text">Transactions</span>
+                        </h2>
+                    </div>
+
+                    <div class="card-body">
+                        <table class="transactions">
+                            <colgroup>
+                                <col style="width:30%">
+                                <col style="width:20%">
+                                <col style="width:15%">
+                                <col style="width:20%">
+                                <col style="width:15%">
+                            </colgroup>  
+                            <thead>
+                                <tr>
+                                    <td class="tx_id">TX id</td>
+                                    <td class="tx_date">Date</td>
+                                    <td class="tx_amount">Amount</td>
+                                    <td class="tx_tokens">Tokens</td>
+                                    <td class="tx_status">Status</td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr class="tx">
+                                    <td class="tx_id">
+                                        <a href="#" target="_blank">0x1cd5a0dec01322f8c2b9c6e8ab19af347b0a4fcf</a>
+                                    </td>
+                                    <td class="tx_date">
+                                        <time>28 March 2018</time>
+                                    </td>
+                                    <td class="tx_amount">
+                                        <span class="value eth">0.5 ETH</span>
+                                    </td>
+                                    <td class="tx_tokens">
+                                        <span class="value text-success">15.23 INT</span>
+                                    </td>
+                                    <td class="tx_status">
+                                        <span class="badge badge-rounded badge-success">
+                                            <img src="images/icon-check.svg" alt="" class="btn-icon">
+                                            <span class="btn-label">Approved</span>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr class="spacer">
+                                    <td colspan="5"></td>
+                                </tr>
+
+                                <tr class="tx">
+                                    <td class="tx_id">
+                                        <a href="#" target="_blank">0x1cd5a0dec01322f8c2b9c6e8ab19af347b0a4fcf</a>
+                                    </td>
+                                    <td class="tx_date">
+                                        <time>28 March 2018</time>
+                                    </td>
+                                    <td class="tx_amount">
+                                        <span class="value eth">0.5 ETH</span>
+                                    </td>
+                                    <td class="tx_tokens">
+                                        <span class="value text-danger">15.23 INT</span>
+                                    </td>
+                                    <td class="tx_status">
+                                        <span class="badge badge-rounded badge-danger disabled">
+                                            <img src="images/icon-times.svg" alt="" class="btn-icon">
+                                            <span class="btn-label">Failed</span>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr class="spacer">
+                                    <td colspan="5"></td>
+                                </tr>
+
+                                <tr class="tx">
+                                    <td class="tx_id">
+                                        <a href="#" target="_blank">0x1cd5a0dec01322f8c2b9c6e8ab19af347b0a4fcf</a>
+                                    </td>
+                                    <td class="tx_date">
+                                        <time>28 March 2018</time>
+                                    </td>
+                                    <td class="tx_amount">
+                                        <span class="value eth">0.5 ETH</span>
+                                    </td>
+                                    <td class="tx_tokens">
+                                        <span class="value text-success">15.23 INT</span>
+                                    </td>
+                                    <td class="tx_status">
+                                        <span class="badge badge-rounded badge-success">
+                                            <img src="images/icon-check.svg" alt="" class="btn-icon">
+                                            <span class="btn-label">Approved</span>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr class="spacer">
+                                    <td colspan="5"></td>
+                                </tr>
+
+                                <tr class="tx">
+                                    <td class="tx_id">
+                                        <a href="#" target="_blank">0x1cd5a0dec01322f8c2b9c6e8ab19af347b0a4fcf</a>
+                                    </td>
+                                    <td class="tx_date">
+                                        <time>28 March 2018</time>
+                                    </td>
+                                    <td class="tx_amount">
+                                        <span class="value eth">0.5 ETH</span>
+                                    </td>
+                                    <td class="tx_tokens">
+                                        <span class="value text-danger">15.23 INT</span>
+                                    </td>
+                                    <td class="tx_status">
+                                        <span class="badge badge-rounded badge-danger disabled">
+                                            <img src="images/icon-times.svg" alt="" class="btn-icon">
+                                            <span class="btn-label">Failed</span>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr class="spacer">
+                                    <td colspan="5"></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div><!-- end card -->
+
+
+            </main> <!-- end main -->
 
             <aside>
-                <div class="sidebar">
-                    <div class="card">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure minima aspernatur veritatis expedita tempora aperiam eos modi ratione. Earum nisi dolores ex, deleniti assumenda libero minima quas unde perspiciatis!</p>
-                    </div>
 
-                    <div class="card card-primary">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure minima aspernatur veritatis expedita tempora aperiam eos modi ratione. Earum nisi dolores ex, deleniti assumenda libero minima quas unde perspiciatis!</p>
-                    </div>
-                </div>
+                <div class="sidebar">
+                    
+                    <div class="vertical-carousel">
+
+                        <div class="slide first">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tx-card">
+                                        <div class="tx-card__recepient">Someone from Argentina bought</div>
+                                        <div class="tx-card__amount">1.5 ETH of Intimate Tokens</div>
+                                        <div class="tx-card__time">12 Minutes ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- en slide -->
+
+                        <div class="slide second">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tx-card">
+                                        <div class="tx-card__recepient">Someone from Argentina bought </div>
+                                        <div class="tx-card__amount">1.5 ETH of Intimate Tokens</div>
+                                        <div class="tx-card__time">12 Minutes ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- en slide -->
+
+                        <div class="slide">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tx-card">
+                                        <div class="tx-card__recepient">Someone from Argentina bought</div>
+                                        <div class="tx-card__amount">1.5 ETH of Intimate Tokens</div>
+                                        <div class="tx-card__time">12 Minutes ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- en slide -->
+
+                        <div class="slide">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="tx-card">
+                                        <div class="tx-card__recepient">Someone from Argentina bought </div>
+                                        <div class="tx-card__amount">1.5 ETH of Intimate Tokens</div>
+                                        <div class="tx-card__time">12 Minutes ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- en slide -->
+
+                    </div> <!-- en vartical-carousel -->
+
+                </div> <!-- end sidebar -->
+
+                <!-- 
+                    To add new transaction to this list use function add_transaction(html) where @param(html) is html of slide 
+
+                    For example 
+
+                    var slide = '<div class="slide">'+
+                                    '<div class="card">'+
+                                        '<div class="card-body">'+
+                                            '<div class="tx-card">'+
+                                                '<div class="tx-card__recepient">NEW</div>'+
+                                                '<div class="tx-card__amount">1.5 ETH of Intimate Tokens</div>'+
+                                                '<div class="tx-card__time">12 Minutes ago</div>'+
+                                            '</div>'+
+                                        '</div>'+
+                                    '</div>'+
+                                '</div>';
+
+                    add_transaction( slide );
+
+                    Important!
+                    .first and .second classes must be initialy added to first and second element of list
+                -->
+
             </aside>
 
         </div> <!-- end page-content -->
+
+        <footer class="footer">
+            <div class="container text-center">
+                <div class="copyrigth">2018 ©Intimate</div>
+            </div>
+        </footer>
 
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->

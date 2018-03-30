@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 160" style="enable-background:new 0 0 100 160;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#57618F;}
+	.st1{fill:#515B85;}
+	.st2{fill:#495279;}
+	.st3{fill:#444B6F;}
+</style>
+<g>
+	<polygon id="base_left" class="st0" points="50,0 0,100 50,120 100,100 	"/>
+	<polygon id="base_right" class="st1" points="50,0 50,120 50,120 100,100 	"/>
+	<polygon id="base_bottom_left" class="st2" points="50,120 0,100 50,60 100,100 	"/>
+	<polygon id="base_bottom_right" class="st3" points="50,120 50,100 50,60 100,100 	"/>
+	<polygon id="bottom_left" class="st0" points="50,160 0,110 50,130 100,110 	"/>
+	<polygon id="bottom_right" class="st1" points="50,160 50,110 50,130 100,110 	"/>
+</g>
+</svg>
