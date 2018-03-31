@@ -45,6 +45,26 @@
 	&-danger
 		color: #fff
 		background-color: $color-danger 
+		
+
+	.dismiss-notification
+		position: absolute
+		top: 0.25em
+		right: 0.25em
+		background-color: transparent
+		color: $text
+		border: 0
+		padding: 0
+		width: 0.75em
+		height: 0.75em
+		font-size: 1.5em
+		line-height: 0.75em
+		cursor: pointer
+		transition: all 0.3s ease
+		font-weight: 700 
+		
+		&:hover
+			color: $color-danger
 
 
 
@@ -295,19 +315,18 @@
 
 
 .vertical-carousel
-	height: 200px
-	overflow: hidden
-	padding: 5px 10px
-	position: relative
-	margin-bottom: 2em 
-	margin-top: -10px 
+	position: fixed
+	bottom: 1em
+	left: 1em
 	
 	@media (max-width: 991px)
-		margin-left: -10px
-		margin-right: -10px  
+		position: relative
+		bottom: auto
+		left: auto 
+		display: none
 	
 	&:after
-		content: ''
+		//content: ''
 		width: 100%
 		height: 80px
 		position: absolute
@@ -318,7 +337,7 @@
 		pointer-events: none
 		
 	&:before
-		content: ''
+		//content: ''
 		width: 100%
 		height: 15px
 		position: absolute
@@ -332,11 +351,17 @@
 	
 	.slide
 		padding: 5px 0
-		transition: all 1s ease
+		//transition: all 1s ease
 		opacity: 1
 		margin-top: 0
 		visibility: visible
+		width: 290px
+		display: none
+		
 		//transform: scale(0.9)
+		
+		@media (max-width: 991px)
+			width: 100%
 		
 		//&.first
 			//transform: scale(1)
@@ -355,8 +380,22 @@
 		display: flex
 		align-items: center
 		justify-content: center
-		height: 90px
-		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1)
+		position: relative
+		overflow: hidden
+		box-shadow: -0.349px 4.988px 49px 0px rgba(0, 0, 0, 0.2)
+		
+		&:before
+			content: ''
+			width: 5px
+			height: 100%
+			left: 0
+			top: 0
+			bottom: 0
+			background-color: #D2DCF3
+			position: absolute 
+		
+		@media (max-width: 991px)
+			margin-bottom: 3em 
 		
 		&-body
 			width: 100%
@@ -365,14 +404,13 @@
 
 
 .tx-card
-	font-size: 13px
 	 
 	&__recepient
-		font-weight: 700 
 		margin-bottom: 0.2em
 		
 	&__amount
-		margin-bottom: 0.5em
+		margin-bottom: 1em
+		font-weight: 700
 		
 	&__time
 		font-size: 0.8em 

@@ -190,39 +190,51 @@ jQuery(document).ready(function($) {
     })*/
 
 
-    $('.js-add-slide').on('click', function(event) {
-        event.preventDefault();
-        
+
+    function add_transaction ( html ) {
+        slide = $.parseHTML( html );
+
+        if ( $('.vertical-carousel').find('.slide').length > 0 ) {
+
+            $('.vertical-carousel').find('.slide').fadeOut('1000', function() {
+                $(this).remove();
+
+                $('.vertical-carousel').prepend(slide);
+                $(slide).fadeIn('1000');
+            });    
+
+        } else {
+
+            $('.vertical-carousel').prepend(slide);
+            $(slide).fadeIn('1000');
+
+        }
+    }
+
+    setInterval(function(){
         var str = '<div class="slide">'+
                         '<div class="card">'+
                             '<div class="card-body">'+
                                 '<div class="tx-card">'+
-                                    '<div class="tx-card__recepient">NEW</div>'+
+                                    '<div class="tx-card__recepient">Someone from Argentina just bought</div>'+
                                     '<div class="tx-card__amount">1.5 ETH of Intimate Tokens</div>'+
                                     '<div class="tx-card__time">12 Minutes ago</div>'+
                                 '</div>'+
                             '</div>'+
+                            '<button class="dismiss-notification">×</button>' +
                         '</div>'+
                     '</div>';
 
 
         add_transaction( str );
+    }, Math.random() * (10000 - 4000) + 4000 );
+
+    $(document).on('click', '.dismiss-notification', function(event) {
+        event.preventDefault();
+        $(this).parents('.card').fadeOut('1000', function() {
+            $(this).remove();
+        });
     });
-
-
-    function add_transaction ( html ) {
-        slide = $.parseHTML( html );
-
-        $(slide).addClass('hidden');
-
-        $('.vertical-carousel').prepend( slide );
-
-        setTimeout(function(){
-            $('.vertical-carousel').find('.second').removeClass('second');
-            $('.vertical-carousel').find('.first').removeClass('first').addClass('second');
-            $(slide).removeClass('hidden').addClass('first');
-        }, 100);
-    }
 
 
 
