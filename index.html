@@ -14,7 +14,17 @@
     </head>
     <body>
 
-
+        <div class="bouncing-loader">
+            <div class="bouncing-loader__round"></div>
+            <div class="bouncing-loader__round"></div>
+            <div class="bouncing-loader__round"></div>
+        </div>
+        <script>
+            function addClass() {
+                document.querySelector('.bouncing-loader').classList.add("animated")
+            }
+            setTimeout( addClass, 2000);
+        </script>
        
         <!--=================================================================================================-->
                                                     <!-- HEADER -->
