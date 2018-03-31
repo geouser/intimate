@@ -9,6 +9,7 @@
 		+transition(all, .4s)
 		
 	@media (max-width: 991px)
+		visiblity: hidden
 		top: 0
 		bottom: 0
 		right: 0
@@ -17,15 +18,13 @@
 		width: 300px
 		z-index: 10 
 		padding: 55px 0
-		overflow: auto 
+		overflow: auto
+		transition: all 0.5s ease
 		
 		&.active
-			transition: all 0.5s ease
-			opacity: 1
 			visibility: visible
+			transition: all 0.5s ease
 			transform: translateX(0)
-			
-
 			
 
 		.menu-button
@@ -36,9 +35,11 @@
 	.flex-row
 		display: flex
 		align-items: stretch
+		flex-wrap: wrap
 		
 	&-bottom
-		border-top: 1px solid #EFEDED
+		@media (min-width: 992px)
+			border-top: 1px solid #EFEDED
 		
 
 @media (min-width: 992px)
@@ -61,21 +62,29 @@
 	padding: 0.5em 2em
 	border-right: 1px solid #EFEDED
 	
-	@media (max-width: 991px)
-		padding-left: 1em
-		padding-right: 1em  
 	
-	&:first-child
-		padding-left: 0
-		
-	&:last-child
-		padding-right: 0 
+	@media (max-width: 991px)
+		padding: 1.5em 1em
+		width: 100%
 		border: 0
+		border-bottom: 1px solid #EFEDED
+		justify-content: center
+	
+	@media (min-width: 992px)
+		&:first-child
+			padding-left: 0
+			
+		&:last-child
+			padding-right: 0 
+			border: 0
 	
 	&.logo-section
 		justify-content: flex-start
 		flex: 1 1 auto
 		width: 1%
+		
+		@media (max-width: 991px)
+			display: none
 		
 	&.login-section
 		a
@@ -191,9 +200,18 @@
 
 .site-menu
 	margin: -0.5em 0
+	
+	@media (max-width: 991px)
+		display: block
+		width: 100%
+		margin: 0
+		
 	ul
 		list-style-type: none
 		margin: 0 -10px
+		
+		@media (max-width: 991px)
+			margin: 0
 
 		li
 			display: inline-block
@@ -204,12 +222,17 @@
 			@media (min-width: 992px)
 				font-size: 1.1em 
 				margin: 0 10px
+				
+			@media (max-width: 991px)
+				display: block
+				margin: 0
 
 			a
 				padding: 1.5em 0
 				color: $text
 				display: block
 				position: relative 
+				text-align: center
 				
 				&:after
 					content: ''

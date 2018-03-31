@@ -101,6 +101,13 @@ jQuery(document).ready(function($) {
     });
 
 
+    $('.js-close-menu').on('click', function(event) {
+        event.preventDefault();
+        $('.js-toggle-menu').toggleClass('is-active');
+        $('.header').removeClass('active');
+    });
+
+
 
     /*---------------------------
                                   Fancybox
