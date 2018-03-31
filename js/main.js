@@ -97,7 +97,14 @@ jQuery(document).ready(function($) {
     $('.js-toggle-menu').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('is-active');
-        $('.header').toggleClass('active');
+        $('.mobile-menu').toggleClass('active');
+    });
+
+
+    $('.js-close-menu').on('click', function(event) {
+        event.preventDefault();
+        $('.js-toggle-menu').toggleClass('is-active');
+        $('.mobile-menu').removeClass('active');
     });
 
 
@@ -238,6 +245,47 @@ jQuery(document).ready(function($) {
         $(this).parents('.card').find('.btn').addClass('btn-success').text('Selected');
 
         $(this).parents('.js-plan-select-form').find('input[name="selected_plan"]').val(plan_id);
+    });
+
+
+
+
+
+    /* Copy to clipboad */
+    $('.js-copy-value').on('click', function(event) {
+        event.preventDefault();
+        var input = $(this).siblings('input');
+
+        /* Select the text field */
+        input.select();
+
+        /* Copy the text inside the text field */
+        document.execCommand("Copy");
+
+        /* Alert the copied text */
+        alert("Copied the text: " + input.val());
+    }); 
+
+
+
+    /* toggle password show */
+    $('.js-toggle-password').on('click', function(event) {
+        event.preventDefault();
+
+        var labels = $(this).attr('data-label');
+
+        var states = labels.split(" | ");
+        var input = $(this).siblings('input');
+
+        $(this).toggleClass('is-active btn-primary');
+
+        if ( $(this).hasClass('is-active') ) {
+            $(this).text( states[0] );
+            input.attr('type', 'text');
+        } else {
+            $(this).text( states[1] );
+            input.attr('type', 'password');
+        }
     });
 
 
