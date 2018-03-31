@@ -188,13 +188,45 @@
 	width: 100%
 	table-layout: fixed
 	font-size: 0.9em
-	
+	@media (max-width: 767px)
+		display: block
+		font-size: 0.7em
+
+	tbody 
+		@media (max-width: 767px)
+			display: block
+	thead 
+		tr 
+			@media (max-width: 767px)
+				max-width: 100%
+				display: flex
+				flex-wrap: wrap
+				width: 100%
+				margin-bottom: 20px
+				font-weight: 700
 	td
 		padding: 1.5em 0.5em
+		@media (max-width: 767px)
+			width: 33.32%
+			display: flex
+			align-items: center
+			&:first-child
+				width: 60%
+			&:nth-child(2) 
+				width: 40%
+				text-align: right
+				justify-content: flex-end
+		@media (max-width: 576px)
+			padding: 1em 0.5em
 	
 	.tx
 		@extend .card
 		padding: 0
+		@media (max-width: 767px)
+			max-width: 100%
+			display: flex
+			flex-wrap: wrap
+			width: 100%
 		
 		td
 			&:first-child
@@ -207,7 +239,6 @@
 			overflow: hidden
 			white-sapce: nowrap
 			text-overflow: ellipsis
-			
 			a
 				color: $color-info
 				
@@ -244,6 +275,7 @@
 			
 		&_status
 			text-align: right
+			justify-content: flex-end
 			
 	.spacer
 
