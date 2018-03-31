@@ -120,6 +120,7 @@
 		text-transform: uppercase 
 		font-size: 1.25em 
 		line-height: 34px 
+		transition: color 0.3s ease
 		
 		.form-control
 			font-size: 14px 
@@ -127,6 +128,8 @@
 			border-top: 0
 			border-right: 0
 			border-left: 0  
+			background-color: transparent 
+			transition: all 0.3s ease
 		
 
 	&__token-amount
@@ -134,6 +137,7 @@
 		background-color: #F1F4F8 
 		text-align: center
 		padding: 1em 2em
+		transition: background-color 0.3s ease
 		
 
 	&__price
@@ -141,6 +145,28 @@
 		text-align: center
 		font-weight: 700
 		
+
+.token-plans
+
+	.card
+		transition: all 0.3s ease
+
+		&.selected
+			background-color: $color-info
+			color: #fff
+			
+			.token-plan
+
+				&__token-amount
+					background-color: $color-info-hover 
+					
+				&__amount
+					color: #fff
+					
+					.form-control
+						border-color: #fff
+						color: #fff
+
 
 
 
@@ -219,11 +245,12 @@
 
 
 .vertical-carousel
-	height: 300px
+	height: 200px
 	overflow: hidden
-	padding: 2px
+	padding: 5px 10px
 	position: relative
 	margin-bottom: 2em 
+	margin-top: -10px 
 	
 	&:after
 		content: ''
@@ -236,6 +263,18 @@
 		background: linear-gradient(to bottom, rgba(247,246,246,0) 0%, rgba(247,246,246,1) 100%)
 		pointer-events: none
 		
+	&:before
+		content: ''
+		width: 100%
+		height: 15px
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		background: linear-gradient(to top, rgba(247,246,246,0) 0%, rgba(247,246,246,1) 100%)
+		pointer-events: none
+		z-index: 1 
+		
 	
 	.slide
 		padding: 5px 0
@@ -243,15 +282,13 @@
 		opacity: 1
 		margin-top: 0
 		visibility: visible
-		transform: scale(0.9)
+		//transform: scale(0.9)
 		
-		&.slick-current
-			transform: scale(1)
-			& + .slick-slide
-				transform: scale(0.95)
+		//&.first
+			//transform: scale(1)
 			
-		&.second
-			transform: scale(0.95)
+		//&.second
+			//transform: scale(0.95)
 		
 		&.hidden
 			opacity: 0
@@ -265,7 +302,7 @@
 		align-items: center
 		justify-content: center
 		height: 90px
-		box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1)
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1)
 		
 		&-body
 			width: 100%

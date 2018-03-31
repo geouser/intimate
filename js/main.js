@@ -172,7 +172,7 @@ jQuery(document).ready(function($) {
                                   Vertical carousel
     ---------------------------*/
 
-    $('.vertical-carousel').slick({
+    /*$('.vertical-carousel').slick({
        vertical: true,
        slidesToShow: 3,
        slidesToScroll: 1,
@@ -180,7 +180,7 @@ jQuery(document).ready(function($) {
        infinite: true,
        autoplay: true,
         autoplaySpeed: 2000,
-    })
+    })*/
 
 
     $('.js-add-slide').on('click', function(event) {
@@ -216,6 +216,29 @@ jQuery(document).ready(function($) {
             $(slide).removeClass('hidden').addClass('first');
         }, 100);
     }
+
+
+
+
+    /* Select plan */
+    $('.js-select-plan').on('click', function(event) {
+        event.preventDefault();
+        /* Act on the event */
+
+        $(this).parents('.js-plan-select-form').find('.card').each(function(index, el) {
+            $(this).removeClass('selected');
+            var plan_id = $(this).attr('data-id');
+            $(this).find('input[name="plans['+plan_id+'][selected]"]').val('0');
+            $(this).find('.btn').removeClass('btn-success').text('Select');
+        });
+
+        $(this).parents('.card').addClass('selected');
+        var plan_id = $(this).parents('.card').attr('data-id');
+        $(this).parents('.card').find('input[name="plans['+plan_id+'][selected]"]').val('1');
+        $(this).parents('.card').find('.btn').addClass('btn-success').text('Selected');
+
+        $(this).parents('.js-plan-select-form').find('input[name="selected_plan"]').val(plan_id);
+    });
 
 
     /*---------------------------
