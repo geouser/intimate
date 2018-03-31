@@ -245,8 +245,10 @@
 		visibility: visible
 		transform: scale(0.9)
 		
-		&.first
+		&.slick-current
 			transform: scale(1)
+			& + .slick-slide
+				transform: scale(0.95)
 			
 		&.second
 			transform: scale(0.95)

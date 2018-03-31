@@ -172,13 +172,15 @@ jQuery(document).ready(function($) {
                                   Vertical carousel
     ---------------------------*/
 
-    //$('.vertical-carousel').slick({
-    //    vertical: true,
-    //    slidesToShow: 2,
-    //    slidesToScroll: 1,
-    //    arrows: false,
-    //    infinite: false
-    //})
+    $('.vertical-carousel').slick({
+       vertical: true,
+       slidesToShow: 3,
+       slidesToScroll: 1,
+       arrows: false,
+       infinite: true,
+       autoplay: true,
+        autoplaySpeed: 2000,
+    })
 
 
     $('.js-add-slide').on('click', function(event) {
