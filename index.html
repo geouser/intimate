@@ -147,71 +147,85 @@
                         <span class="icon"><img src="images/icon-cart.svg" alt=""></span>
                         <span class="text">Buy Intimate Token</span>
                     </h2>
-                    
-                    <div class="token-plans">
-                        <div class="row">
 
-                            <div class="col-12 col-md-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="token-plan">
-                                            <div class="token-plan__icon">
-                                                <img src="images/icon-ethereum.svg" alt="">
-                                            </div>
 
-                                            <div class="token-plan__amount">0.1 ETHEREUM</div>
+                    <form action="" class="js-plan-select-form">
+                        <div class="token-plans">
+                        
+                            <div class="row">
 
-                                            <div class="token-plan__token-amount">
-                                                <p>Amount of tokens: 0</p>
-                                                <p>Bonus: 1000</p>
-                                            </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="card" data-id="1">
+                                        <div class="card-body">
+                                            <div class="token-plan">
+                                                <div class="token-plan__icon">
+                                                    <img src="images/icon-ethereum.svg" alt="">
+                                                </div>
 
-                                            <div class="token-plan__price">= 45.68 USD</div>
+                                                <div class="token-plan__amount">0.1 ETHEREUM</div>
 
-                                            <div class="text-center">
-                                                <a href="#" class="btn btn-rounded btn-sm">Select</a>
-                                            </div>
-                                        </div> <!-- end token-plan -->
+                                                <div class="token-plan__token-amount">
+                                                    <p>Amount of tokens: 5</p>
+                                                    <p>Bonus: 1000</p>
+                                                </div>
+
+                                                <div class="token-plan__price">= 45.68 USD</div>
+
+                                                <div class="text-center">
+                                                    <input type="hidden" name="plans[1][id]" value="1">
+                                                    <input type="hidden" name="plans[1][eth_amount]" value="0.1">
+                                                    <input type="hidden" name="plans[1][token_amount]" value="0">
+                                                    <input type="hidden" name="plans[1][Bonus]" value="1000">
+                                                    <input type="hidden" name="plans[1][price]" value="45.68 usd">
+                                                    <input type="hidden" name="plans[1][selected]" value="0">
+                                                    <a href="#" class="btn btn-rounded btn-sm js-select-plan">Select</a>
+                                                </div>
+                                            </div> <!-- end token-plan -->
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col-12 col-md-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="token-plan">
-                                            <div class="token-plan__icon">
-                                                <img src="images/icon-ethereum.svg" alt="">
-                                            </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="card" data-id="2">
+                                        <div class="card-body">
+                                            <div class="token-plan">
+                                                <div class="token-plan__icon">
+                                                    <img src="images/icon-ethereum.svg" alt="">
+                                                </div>
 
-                                            <div class="token-plan__amount">0.1 ETHEREUM</div>
+                                                <div class="token-plan__amount">0.5 ETHEREUM</div>
 
-                                            <div class="token-plan__token-amount">
-                                                <p>Amount of tokens: 0</p>
-                                                <p>Bonus: 1000</p>
-                                            </div>
+                                                <div class="token-plan__token-amount">
+                                                    <p>Amount of tokens: 25</p>
+                                                    <p>Bonus: 5000</p>
+                                                </div>
 
-                                            <div class="token-plan__price">= 45.68 USD</div>
+                                                <div class="token-plan__price">= 250.25 USD</div>
 
-                                            <div class="text-center">
-                                                <a href="#" class="btn btn-rounded btn-sm">Select</a>
-                                            </div>
-                                        </div> <!-- end token-plan -->
+                                                <div class="text-center">
+                                                    <input type="hidden" name="plans[2][id]" value="1">
+                                                    <input type="hidden" name="plans[2][eth_amount]" value="0.1">
+                                                    <input type="hidden" name="plans[2][token_amount]" value="25">
+                                                    <input type="hidden" name="plans[2][Bonus]" value="1000">
+                                                    <input type="hidden" name="plans[2][price]" value="45.68 usd">
+                                                    <input type="hidden" name="plans[2][selected]" value="0">
+                                                    <a href="#" class="btn btn-rounded btn-sm js-select-plan">Select</a>
+                                                </div>
+                                            </div> <!-- end token-plan -->
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col-12 col-md-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="token-plan">
-                                            <form action="">
+                                <div class="col-12 col-md-4">
+                                    <div class="card" data-id="3">
+                                        <div class="card-body">
+                                            <div class="token-plan">
                                                 <div class="token-plan__icon">
                                                     <img src="images/icon-ethereum.svg" alt="">
                                                 </div>
 
                                                 <div class="token-plan__amount">
-                                                    <input type="text" name="amount" placeholder="Amount" class="form-control form-control-sm">
+                                                    <input type="text" name="plans[3][eth_amount]" placeholder="Amount" class="form-control form-control-sm">
                                                 </div>
 
                                                 <div class="token-plan__token-amount">
@@ -222,24 +236,30 @@
                                                 <div class="token-plan__price">= 45.68 USD</div>
 
                                                 <div class="text-center">
-                                                    <button class="btn btn-rounded btn-sm">Select</button>
+                                                    <input type="hidden" name="plans[3][id]" value="1">
+                                                    <input type="hidden" name="plans[3][token_amount]" value="25">
+                                                    <input type="hidden" name="plans[3][Bonus]" value="1000">
+                                                    <input type="hidden" name="plans[3][price]" value="45.68 usd">
+                                                    <input type="hidden" name="plans[3][selected]" value="0">
+                                                    <button class="btn btn-rounded btn-sm js-select-plan">Select</button>
                                                 </div>    
-                                            </form>
-                                            
-                                        </div> <!-- end token-plan -->
+                                            </div> <!-- end token-plan -->
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                        </div>    
-                    </div> <!-- end token-plans -->
+                            </div>  
+                              
+                        </div> <!-- end token-plans -->
 
-                    <div class="text-right">
-                        <a href="#" class="btn btn-primary btn-sm btn-rounded">
-                            <span class="btn-label">Next</span>
-                            <img src="images/icon-right.svg" alt="" class="btn-icon">
-                        </a>
-                    </div>
+                        <div class="text-right">
+                            <input type="hidden" name="selected_plan" value="">
+                            <button class="btn btn-primary btn-sm btn-rounded">
+                                <span class="btn-label">Next</span>
+                                <img src="images/icon-right.svg" alt="" class="btn-icon">
+                            </button>
+                        </div>
+                    </form>
                     
                 </section> <!-- end section -->
 
@@ -389,7 +409,7 @@
                     
                     <div class="vertical-carousel">
 
-                        <div class="slide">
+                        <div class="slide first">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="tx-card">
@@ -401,7 +421,7 @@
                             </div>
                         </div> <!-- en slide -->
 
-                        <div class="slide">
+                        <div class="slide second">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="tx-card">
@@ -450,6 +470,8 @@
                         </div> <!-- en slide -->
 
                     </div> <!-- en vartical-carousel -->
+
+                    <button class="btn btn-info btn-rounded btn-sm js-add-slide">Add slide</button>
 
                 </div> <!-- end sidebar -->
 
